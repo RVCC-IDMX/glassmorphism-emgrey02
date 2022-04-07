@@ -8,21 +8,24 @@ body {
     color: black;
     margin: 0;
     width: 100%;
+    overflow: hidden;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: clamp(2.5em, 5vw + 1em, 4em);
     font-weight: 800;
     width: min-content;
     color: white;
+    margin-inline: auto;
 
-    @media (min-width: 800px) {
+    @media (min-width: 1000px) {
         margin-inline-start: 30%;
+        font-size: 5em;
     }
 }
 
 h2 {
-    font-size: 2em;
+    font-size: clamp(1em, 3vw + 1em, 2em);
     font-weight: 700;
 }
 
@@ -35,7 +38,7 @@ img {
 }
 
 .container {
-    display: inline-block;
+    display: block;
     background: rgba(255, 255, 255, 0.2);
     padding: 3em;
     border-radius: 3em;
@@ -45,9 +48,11 @@ img {
     background-clip: padding-box;
     box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
     z-index: 1;
+    width: fit-content;
     margin-block: 10rem 2rem;
+    margin-inline: auto;
 
-    @media (min-width: 800px) {
+    @media (min-width: 1000px) {
         margin-inline-start: 30%;
     }
 }
